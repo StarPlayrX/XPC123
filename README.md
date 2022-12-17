@@ -9,7 +9,7 @@ By converting it to a mach service with very little code changes, this allows an
 
 I've included both a mach service and a client. Tried to make this as easy as possible and kept it similar to Apple's template.
 
-I am sure there is much more to XPC than this, however having a working example on both the client and server makes sense.
+I am sure there is much more to XPC than this, however having a working example on both the client and server makes it worth XPC gold.
 
 Hope this becomes useful to anyone wanting to use XPC across their own apps. Enjoy!
 
