@@ -17,7 +17,7 @@ Outside of Xcode, MachServices need to run as a LaunchDaemon.  Apple allows Laun
 
 Example LaunchDaemon plist. Will include this example Plist in the repo. 
 
-{
+`{
     KeepAlive =     {
         SuccessfulExit = 0;
     };
@@ -31,12 +31,14 @@ Example LaunchDaemon plist. Will include this example Plist in the repo.
         "/Applications/XPCMachService"
     );
     RunAtLoad = 1;
-}
+}`
 
 It will need to go in /Library/LaunchDaemons for launchd to start it. 
 
 Permissions:
 https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
+
+`sudo chown root:wheel /Library/LaunchDaemons/myfile.plist`
 
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
