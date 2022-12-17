@@ -30,6 +30,6 @@ class ServiceDelegate: NSObject, NSXPCListenerDelegate {
 
 let delegate = ServiceDelegate()
 let listener = NSXPCListener(machServiceName: "com.brusstodd.XPCMachService")
-listener.delegate = delegate;
+listener.delegate = delegate
 listener.resume()
-RunLoop.main.run()
+dispatchMain()
