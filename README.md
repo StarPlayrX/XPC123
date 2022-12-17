@@ -1,5 +1,4 @@
 # XPC123
- XPC easy as 123, XPC it's you and me!
 
 Made these example two apps of a mach service that works with both Application clients and command line utilities. 
 
