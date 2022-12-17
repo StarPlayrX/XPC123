@@ -11,7 +11,7 @@ Hope this becomes useful to anyone wanting to use XPC across their own apps. Enj
 Requirements:
 The mach service seems to only work from a command line app / headless app, and not as a plugin. If you have any additional uses like getting this to work as an XPC Service plugin/bundle but still works with external apps, please file an issue or do a pull request. 
 
-The Mach Client can run in either a gui app or command line tool. Most of the time, you'll run the mach service as a Launch Daemon, so this example is probably what you want to get started using XPC.
+The Mach Client can run in either a gui app or command line tool. Most of the time, you'll run the mach service as a Launch Daemon, more on that next.
 
 Outside of Xcode, MachServices need to run as a LaunchDaemon.  Apple allows LaunchDaemon MachServices to run in Xcode for testing purposes only. Here is some info on that:
 
