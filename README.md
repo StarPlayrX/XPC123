@@ -13,6 +13,13 @@ The mach service seems to only work from a command line app / headless app, and 
 
 The Mach Client can run in either a gui app or command line tool. Most of the time, you'll run the mach service as a Launch Daemon, so this example is probably what you want to get started using XPC.
 
+Outside of Xcode, MachServices need to run as a LaunchDaemon.  Apple allows Launch Daemon Mach Services to run in Xcode for testing purposes only. Here is some info on that:
+
+https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
+
+Example:
+<img width="799" alt="image" src="https://user-images.githubusercontent.com/52664524/208255390-ce64d8e0-ada7-4ea8-8e75-6c6d038d1aa8.png">
+
 XPC easy as 123, XPC it's you and me!
 
 
