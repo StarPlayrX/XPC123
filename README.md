@@ -7,7 +7,7 @@ Started with Apple's XPC Service template with Swift, but Apple's does not work 
 
 By converting it to a mach service with very little code changes, this allows any app or cli to use the mach service.
 
-I've included both a mach service and a client. Tried to make this a easy as possible and keep it similar to Apple's template.
+I've included both a mach service and a client. Tried to make this as easy as possible and kept it similar to Apple's template.
 
 I am sure there is much more to XPC than this, however having a working example on both the client and server makes sense.
 
