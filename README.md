@@ -23,6 +23,10 @@ Example LaunchDaemon .plist:
 
 It will need to go in /Library/LaunchDaemons for launchd to start it. 
 
+Great discussion here on XPC MachServices
+
+https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
+
 XPC easy as 123, XPC it's you and me!
 
 
