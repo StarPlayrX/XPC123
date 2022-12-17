@@ -1,6 +1,6 @@
 # XPC123
 
-Made these example two apps of a mach service that works with both Application clients and command line utilities. 
+Made these example two Swift apps of a mach service that works with both Application clients and command line utilities. 
 
 Started with Apple's XPC Service template with Swift, but Apple's does not work with external applications making it a reason to abandon their approach. By converting it to a mach service with very little code changes, this allows any app or cli to use the mach service.
 
