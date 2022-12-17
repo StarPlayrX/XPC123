@@ -17,7 +17,7 @@ Outside of Xcode, MachServices need to run as a LaunchDaemon.  Apple allows Laun
 
 https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
 
-Example LaunchDaemon .plist, running as a priveleged helper is not required unless you need your daemon to install things on the user's behalf. But that's not needed for simple client server communication which is the focus of this project.
+Example LaunchDaemon plist. running as a priveleged helper is not required unless you need your daemon to install things on the user's behalf. But that's not needed for simple client server communication which is the focus of this project.
 
 <img width="799" alt="image" src="https://user-images.githubusercontent.com/52664524/208255390-ce64d8e0-ada7-4ea8-8e75-6c6d038d1aa8.png">
 
