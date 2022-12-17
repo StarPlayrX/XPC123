@@ -15,11 +15,28 @@ The MachClient can run in either a gui app or command line tool. Most of the tim
 
 Outside of Xcode, MachServices need to run as a LaunchDaemon.  Apple allows LaunchDaemon MachServices to run in Xcode for testing purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
 
-Example LaunchDaemon plist. Will give a more practical example soon. 
+Example LaunchDaemon plist. Will include this example Plist in the repo. 
 
-<img width="799" alt="image" src="https://user-images.githubusercontent.com/52664524/208255390-ce64d8e0-ada7-4ea8-8e75-6c6d038d1aa8.png">
+{
+    KeepAlive =     {
+        SuccessfulExit = 0;
+    };
+    Label = "com.brusstodd.XPCMachService";
+    LaunchOnlyOnce = 0;
+    MachServices =     {
+        "com.brusstodd.XPCMachService" = 1;
+    };
+    Program = "/Applications/XPCMachService";
+    ProgramArguments =     (
+        "/Applications/XPCMachService"
+    );
+    RunAtLoad = 1;
+}
 
 It will need to go in /Library/LaunchDaemons for launchd to start it. 
+
+Permissions:
+https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
 
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
