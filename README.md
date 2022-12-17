@@ -17,7 +17,7 @@ Outside of Xcode, MachServices need to run as a LaunchDaemon.  Apple allows Laun
 
 Example LaunchDaemon plist. Will include this example Plist in the repo. 
 
-```{
+``{
     KeepAlive =     {
         SuccessfulExit = 0;
     };
@@ -31,7 +31,7 @@ Example LaunchDaemon plist. Will include this example Plist in the repo.
         "/Applications/XPCMachService"
     );
     RunAtLoad = 1;
-}```
+}``
 
 It will need to go in /Library/LaunchDaemons for launchd to start it. 
 
