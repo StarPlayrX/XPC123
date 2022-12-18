@@ -8,11 +8,11 @@ I've included both a service and a client. Tried to make this as easy as possibl
 
 Hope this becomes useful to anyone wanting to use XPC across their own apps. Enjoy!
 
-The MachService seems to only work from a command line app / headless app, and not as a plugin.
+The MachService seems to only work from a command line app / headless app, and not as a plugin. This means it needs to run as a LaunchDaemon which will make it system wide.
 
-The MachClient can run in either a gui app or command line tool. Most of the time, you'll run the service as a Launch Daemon; more on that next. This should also work with Authorization Plugins, but that hans't been officially tested yet and will be considered out of scope for now.
+The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hans't been officially tested yet and will be considered out of scope for now.
 
-Outside of Xcode, MachServices need to run as a LaunchDaemon.  Apple allows LaunchDaemon MachServices to run in Xcode for testing purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
+Outside of Xcode, MachServices need to run as a LaunchDaemon. Apple allows MachServices to run in Xcode for testing purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
 
 Example LaunchDaemon plist. Will include this example Plist in the repo. 
 
