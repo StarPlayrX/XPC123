@@ -14,7 +14,7 @@ The MachClient can run in either a gui app or command line tool. This should als
 
 Outside of Xcode, MachServices need to run as a LaunchDaemon. Apple allows MachServices to run in Xcode for testing and development purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
 
-Example LaunchDaemon values. An example plist is included in the repo. Edit it to your liking.
+Example LaunchDaemon values. An example plist is included in the repo. Using Xcode, edit it to your liking.
 
 ```
 {
