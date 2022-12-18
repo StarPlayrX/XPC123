@@ -27,12 +27,12 @@ Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
 
 
-Or add in an internal web server:
+Or two embedded http servers:
 Application A         <-> XPC Launch Daemon
-Localhost http server <-> Application B
+Localhost http server B <-> Application B
 
 Application B         <-> XPC Launch Daemon
-Localhost http server <-> Application A
+Localhost http server A <-> Application A
 ```
 
 As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. an XPCService plugin is one to one.
