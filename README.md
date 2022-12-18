@@ -12,7 +12,7 @@ Application B <-> Oh no!
 
 
 ```
-Alternative using a XPC MachService:
+Alternative using a MachService:
 Application A <-> XPC Launch Daemon 
 Application B <-> XPC Launch Daemon 
 ```
