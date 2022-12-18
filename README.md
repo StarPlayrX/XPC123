@@ -6,8 +6,6 @@ Started with Apple's XPC Service template with Swift, but Apple's does not work 
 
 I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. I am sure there is much more to XPC than this. For me, having an end-to-end working example makes much easier getting started.
 
-Hope this becomes useful to anyone wanting to use XPC across their own apps. Enjoy!
-
 The MachService seems only works from a command line / headless app, not as a plugin. This means it needs to run as a LaunchDaemon and this will make it system wide.
 
 The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hasn't been tested. I will full you in if any changes need to be made for this specific use case.
@@ -54,6 +52,7 @@ sudo launchctl unload /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
+Hope this becomes useful to anyone wanting to use XPC across their own apps.
 XPC easy as 123, XPC it's you and me!
 
 
