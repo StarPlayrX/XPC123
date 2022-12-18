@@ -18,7 +18,7 @@ Application B <-> XPC Launch Daemon
 ```
 
 ```
-You could combine the 2 approaches / abstract middleware:
+You could combine the two using a middleware layer:
 Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
 ```
