@@ -44,7 +44,7 @@ https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-pa
 To manually load the LaunchDaemon without rebooting use launchctl (Launch Control)
 `sudo launchctl load /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist`
 
-and if you want to unload it:
+and if you want to unload it
 `sudo launchctl unload /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist`
 
 Great discussion here on XPC MachServices
