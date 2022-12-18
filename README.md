@@ -40,9 +40,16 @@ It will need to go in /Library/LaunchDaemons for launchd to start it.
 Permissions:
 https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
 
-`sudo chown root:wheel /Library/LaunchDaemons/myfile.plist`
-`sudo launchctl load /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist`
-`sudo launchctl unload /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist`
+```
+# Permissions (required)
+sudo chown root:wheel /Library/LaunchDaemons/myfile.plist
+
+# Load outside of rebooting (good for testing purposes, otherwise test using Xcode)
+sudo launchctl load /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
+
+# Unload if needed 
+sudo launchctl unload /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
+```
 
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
