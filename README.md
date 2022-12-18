@@ -52,7 +52,7 @@ Permissions:
 https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
 
 ```
-# Permissions (required)
+# Permissions (required, needs to be run every time you update the plist)
 sudo chown root:wheel /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 
 # Load outside of rebooting (good for testing your plist!)
