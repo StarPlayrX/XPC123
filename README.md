@@ -26,25 +26,6 @@ You could combine the two like this:
 Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
 ```
-
-```
-Use two embedded http servers:
-Application A           <-> XPC Launch Daemon
-Localhost http server B <-> Application B
-
-Application B           <-> XPC Launch Daemon
-Localhost http server A <-> Application A
-```
-
-```
-To fix the XPC Service dead end you could do this:
-Application A           <-> XPC Service
-Localhost http server B <-> Application B
-
-Application B           <-> XPC Service
-Localhost http server A <-> Application A
-```
-
 As you can see Apple's primary example leads you to a dead end. You could augment it with an embedded webserver on each side using Swifter or my fork SwifterLite, but that's more work. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which is only one to one.
 
 I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is an Application XPC Service vs. an XPC MachService.
@@ -95,7 +76,26 @@ sudo launchctl unload -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.pli
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
+Here are some more examples combining XPC with a http webserver. This can reduce having using a timer or a watcher to check if a backend call as been sent. http servers can interface with its hosting app. You may be able to do with the same only with XPC but this is just another wrinkle to consider:
+
+```
+Use two embedded http servers:
+Application A           <-> XPC Launch Daemon
+Localhost http server B <-> Application B
+
+Application B           <-> XPC Launch Daemon
+Localhost http server A <-> Application A
+```
+
+```
+To fix the XPC Service dead end you could do this:
+Application A           <-> XPC Service
+Localhost http server B <-> Application B
+
+Application B           <-> XPC Service
+Localhost http server A <-> Application A
+```
+
 Hope this becomes useful to anyone wanting to use XPC across their own apps.
 XPC easy as 123, XPC it's you and me!
-
 
