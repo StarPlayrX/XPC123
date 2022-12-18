@@ -33,6 +33,13 @@ Localhost http server B <-> Application B
 
 Application B           <-> XPC Launch Daemon
 Localhost http server A <-> Application A
+
+You could get an XPC Service plugin to work like this:
+Application A           <-> XPC Service
+Localhost http server B <-> Application B
+
+Application B           <-> XPC Service
+Localhost http server A <-> Application A
 ```
 
 As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. an XPCService plugin is one to one.
