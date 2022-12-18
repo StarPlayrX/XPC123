@@ -76,7 +76,7 @@ sudo launchctl unload -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.pli
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
-Here are some more examples combining XPC with a http webserver. This can reduce having using a timer or a watcher to check if a backend call as been sent. http servers can interface with its hosting app. You may be able to do with the same only with XPC but this is just another wrinkle to consider:
+Here are some more examples combining XPC with a http webserver. This can reduce having using a timer or a watcher to check if a backend call as been sent. Embedded https servers interface with its hosting app. You may be able to do with with XPC only and if you do, I'd love to see your example.
 
 ```
 Use two embedded http servers:
