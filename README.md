@@ -22,7 +22,7 @@ Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
 ```
-You could combine the two like this:
+You could combine the XPC Service with the XPC Daemon:
 Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
 ```
