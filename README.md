@@ -27,7 +27,7 @@ Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
 
 
-Or two embedded http servers:
+Or use two embedded http servers:
 Application A         <-> XPC Launch Daemon
 Localhost http server B <-> Application B
 
