@@ -27,7 +27,7 @@ Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
 ```
 
-As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. Apple's XPC Service template is only one to one.
+As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. Apple's XPC Service template using a plugin is only one to one.
 
 I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. I am sure there is much more to XPC than this. For me, having an end-to-end working example makes much easier to get started.
 
