@@ -42,7 +42,7 @@ https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-pa
 
 ```
 # Permissions (required)
-sudo chown root:wheel /Library/LaunchDaemons/myfile.plist
+sudo chown root:wheel /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 
 # Load outside of rebooting (good for testing purposes, otherwise test using Xcode)
 sudo launchctl load /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
