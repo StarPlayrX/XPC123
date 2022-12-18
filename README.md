@@ -10,8 +10,8 @@ Application A <-> XPC Service plugin
 Application B <-> Oh no!
 
 A & B talking to themselves:
-Application A <-> XPC Service plugin
-Application B <-> XPC Service plugin
+Application A <-> XPC Service plugin (Internal)
+Application B <-> XPC Service plugin (Internal)
 ```
 
 
