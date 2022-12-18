@@ -43,6 +43,14 @@ https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-pa
 
 `sudo chown root:wheel /Library/LaunchDaemons/myfile.plist`
 
+To manually load the LaunchDaemon without rebooting use launchctl (Launch Control)
+
+`sudo launchctl load /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist`
+
+and if you want to unload it use
+
+`sudo launchctl unload /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist`
+
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
