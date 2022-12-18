@@ -6,14 +6,16 @@ I started with Apple's XPC Service template with Swift, but Apple's example does
 
 ```
 Apple's default template:
-Application <-> XPC Service
+Application (with entitlments) <-> XPC Service plugin
 ```
 
 
 ```
 Consider this:
-Authorization Plugin (no entitlements) <-> XPC Launch Daemon <-> Launch Agent (with entitlements)
+Authorization Plugin (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
 ```
+
+As you can see Apple's example seems to lead to a dead end.
 
 I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. I am sure there is much more to XPC than this. For me, having an end-to-end working example makes much easier to get started.
 
