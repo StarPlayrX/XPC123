@@ -9,8 +9,9 @@ Apple's default template:
 Application <-> XPC Service
 ```
 
+
 ```
-This solves most use cases:
+Consider this:
 Authorization Plugin (no entitlements) <-> XPC LaunchDaemon <-> Application (with entitlements)
 ```
 
