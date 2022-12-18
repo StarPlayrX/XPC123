@@ -16,13 +16,13 @@ Application B <-> XPC Service B (Internal)
 
 
 ```
-Alternative using a MachService:
+Alternative using a MachService (bingo):
 Application A <-> XPC Launch Daemon (Systemwide)
 Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
 ```
-You could combine the two:
+You could even combine the two:
 Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
