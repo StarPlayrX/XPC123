@@ -26,7 +26,7 @@ For safety, you could combine the two:
 Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
-As you can see Apple's primary example leads you to a dead end. You could augment it with an embedded webserver on each side using Swifter or my fork SwifterLite, but that's out of scope. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which is only one to one.
+As you can see Apple's primary example leads you to a dead end. You could augment it with an embedded webserver on each side using Swifter or my fork SwifterLite, but that's out of scope. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which only has a one to one.
 
 I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is an Application XPC Service vs. an XPC MachService.
 
