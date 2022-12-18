@@ -29,7 +29,7 @@ Application B <-> XPC Service plugin <-> XPC Launch Daemon
 
 As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. an XPCService plugin is one to one.
 
-I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. There is more to XPC than this. FHaving an working example makes things easier.
+I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. There is more to XPC, but having a working example makes it easier.
 
 The MachService only works from a command line / headless app, not as a plugin. It do not have a UI. This means it needs to run as a LaunchDaemon. It also means it will be available system wide which is usually what you want. If you don't want it to be system wide and within the user space, this is where Launch Agents come into play.
 
