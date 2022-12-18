@@ -11,7 +11,7 @@ Application (with entitlements) <-> XPC Service plugin
 
 
 ```
-Consider this:
+Alternative using an XPC MachService:
 Authorization Plugin (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
 ```
 
