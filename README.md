@@ -35,7 +35,7 @@ Example LaunchDaemon values. An example plist is included in the repo. Using Xco
 ```
 
 
-It will need to go in /Library/LaunchDaemons for launchd to start it. 
+Once your edited the example plist, it will need to go in /Library/LaunchDaemons for launchd to start it. 
 
 Permissions:
 https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
@@ -44,7 +44,7 @@ https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-pa
 # Permissions (required)
 sudo chown root:wheel /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 
-# Load outside of rebooting (good for testing purposes, otherwise test using Xcode)
+# Load outside of rebooting (good for testing your plist!)
 sudo launchctl load /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 
 # Unload if needed 
