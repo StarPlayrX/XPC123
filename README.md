@@ -17,8 +17,8 @@ Application B <-> XPC Service plugin
 
 ```
 Alternative using a MachService:
-Application A <-> XPC Launch Daemon 
-Application B <-> XPC Launch Daemon 
+Application A <-> XPC Launch Daemon (Systemwide)
+Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
 ```
