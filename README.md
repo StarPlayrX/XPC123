@@ -46,7 +46,7 @@ Example LaunchDaemon values. An example plist is included in the repo. Using Xco
 ```
 
 
-Once your edited the example plist, it will need to go in /Library/LaunchDaemons for launchd to start it. 
+Once you've edited the example plist, it will need to go in /Library/LaunchDaemons for launchd to start it. 
 
 Permissions:
 https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
