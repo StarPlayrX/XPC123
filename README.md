@@ -6,15 +6,15 @@ I started with Apple's XPC Service template with Swift, but Apple's example does
 
 ```
 Apple's default template:
-Application (with entitlements)  <-> XPC Service plugin
-Generic Bundle (no entitlements) <-> ?
+Application A <-> XPC Service plugin
+Application B <-> ?
 ```
 
 
 ```
 Alternative using an XPC MachService:
-Generic Bundle (no entitlements) <-> XPC Launch Daemon 
-Application  (with entitlements) <-> XPC Launch Daemon 
+Application A <-> XPC Launch Daemon 
+Application B <-> XPC Launch Daemon 
 ```
 
 ```
