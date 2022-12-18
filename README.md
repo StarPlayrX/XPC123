@@ -7,7 +7,7 @@ I started with Apple's XPC Service template with Swift, but Apple's example does
 ```
 Apple's default template:
 Application A <-> XPC Service plugin
-Application B <-> ?
+Application B <-> Oh no!
 ```
 
 
