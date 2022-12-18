@@ -12,7 +12,7 @@ Application (with entitlements) <-> XPC Service plugin
 
 ```
 Alternative using an XPC MachService:
-Authorization Plugin (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
+Authorization Bundle (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
 ```
 
 As you can see Apple's example leads you to a dead end.
