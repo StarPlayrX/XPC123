@@ -6,7 +6,7 @@ I started with Apple's XPC Service template with Swift, the an XPCService plugin
 
 ```
 Apple's default template:
-Application A <-> XPC Service plugin
+Application A <-> XPC Service plugin (Internal)
 Application B <-> Oh no!
 
 A & B talking to themselves:
