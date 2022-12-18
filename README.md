@@ -8,6 +8,10 @@ I started with Apple's XPC Service template with Swift, but Apple's example does
 Apple's default template:
 Application A <-> XPC Service plugin
 Application B <-> Oh no!
+
+A & B still can't communicate:
+Application A <-> XPC Service plugin
+Application B <-> XPC Service plugin
 ```
 
 
