@@ -17,7 +17,7 @@ Application (with entitlements)  <-> XPC Launch Daemon
 ```
 
 ```
-You could combine the two: (Not in my example code)
+You could combine the two approaches: (Not in my example code)
 Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
 ```
