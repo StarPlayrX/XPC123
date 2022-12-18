@@ -22,9 +22,17 @@ Application B <-> XPC Launch Daemon
 ```
 
 ```
-You could combine the two using a middleware layer:
+You could combine the two like this:
 Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
+
+
+Or add in an internal web server:
+Application A         <-> XPC Launch Daemon
+Localhost http server <-> Application B
+
+Application B         <-> XPC Launch Daemon
+Localhost http server <-> Application A
 ```
 
 As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. an XPCService plugin is one to one.
