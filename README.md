@@ -4,7 +4,7 @@ Made these example two Swift apps of a MachService that works with both Applicat
 
 Started with Apple's XPC Service template with Swift, but Apple's does not work with external applications making it a reason to abandon their approach. By converting it to a MachService with very little code changes, this allows any app or cli to use the service.
 
-I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's template. I am sure there is much more to XPC than this, however having a working example on both the client and server makes it worth XPC gold.
+I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. I am sure there is much more to XPC than this, however having a working example on both the client and server makes it worth XPC gold.
 
 Hope this becomes useful to anyone wanting to use XPC across their own apps. Enjoy!
 
