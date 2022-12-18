@@ -22,9 +22,9 @@ Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
 ```
-You could combine the XPC Service with the XPC Daemon:
-Application A <-> XPC Service plugin <-> XPC Launch Daemon
-Application B <-> XPC Service plugin <-> XPC Launch Daemon
+You could combine the two:
+Application A <-> XPC Service A <-> XPC Launch Daemon
+Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
 As you can see Apple's primary example leads you to a dead end. You could augment it with an embedded webserver on each side using Swifter or my fork SwifterLite, but that's more work. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which is only one to one.
 
