@@ -12,7 +12,7 @@ The MachService seems to only work from a command line app / headless app, and n
 
 The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hans't been officially tested yet and will be considered out of scope for now.
 
-Outside of Xcode, MachServices need to run as a LaunchDaemon. Apple allows MachServices to run in Xcode for testing purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
+Outside of Xcode, MachServices need to run as a LaunchDaemon. Apple allows MachServices to run in Xcode for testing and development purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
 
 Example LaunchDaemon plist. Will include this example Plist in the repo. 
 
