@@ -2,7 +2,12 @@
 
 Made these example two Swift apps of a XPC MachService that works with both Application clients and command line utilities. 
 
-Started with Apple's XPC Service template with Swift, but Apple's does not work with external applications making it a reason to abandon their approach. By converting it to a MachService with very little code changes, this allows any app or cli to use the service.
+I started with Apple's XPC Service template with Swift, but Apple's example does not work with external applications making me question the value of that approach. The reason XPC is usually needed is to communicate across different applications or processes. I prime example is a bundle that may not have the ability to use entitlements but another application can. This use case requires cross communication between two or more processes. Converting it to a MachService with very little code changes, this allows any app or cli to use the service.
+
+```
+Consider this:
+Authorization Plugin (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
+```
 
 I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. I am sure there is much more to XPC than this. For me, having an end-to-end working example makes much easier to get started.
 
