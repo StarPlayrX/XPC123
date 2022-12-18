@@ -49,9 +49,9 @@ As you can see Apple's primary example leads you to a dead end. You could augmen
 
 I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. There is more to XPC, but having a working example makes it easier.
 
-The MachService only works from a command line / headless app, not as a plugin. It do not have a UI. This means it needs to run as a LaunchDaemon. It also means it will be available system wide which is usually what you want. If you don't want it to be system wide and within the user space, this is where Launch Agents come into play.
+The MachService is designed run an a LaunchDaemon. Daemons cannot have a UI which makes it ideal to use XPC. Daemons are also system wide and runs as root. If you don't want it to be system wide or use root access consider using this as a LaunchAgent instead within the Aqua session (not covered).
 
-The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hasn't been tested. I will try to pass on more info on this soon.
+The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hasn't been tested. 
 
 Outside of Xcode, MachServices need to run as a LaunchDaemon. Apple allows MachServices to run in Xcode for testing and development purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
 
@@ -82,14 +82,14 @@ Permissions:
 https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
 
 ```
-# Permissions (required, needs to be run every time you update the plist)
+# Plist permissions (required, needs to be run every time you update the plist)
 sudo chown root:wheel /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 
 # Load outside of rebooting (good for testing your plist!)
-sudo launchctl load /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
+sudo launchctl load -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 
 # Unload if needed 
-sudo launchctl unload /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
+sudo launchctl unload -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 ```
 
 Great discussion here on XPC MachServices
