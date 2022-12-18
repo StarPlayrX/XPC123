@@ -22,7 +22,7 @@ Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
 ```
-You could even combine the two:
+For safety, you could combine the two:
 Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
