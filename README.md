@@ -9,7 +9,7 @@ Apple's default template:
 Application A <-> XPC Service plugin
 Application B <-> Oh no!
 
-A & B still can't communicate:
+A & B talking to themselves:
 Application A <-> XPC Service plugin
 Application B <-> XPC Service plugin
 ```
