@@ -16,7 +16,7 @@ Generic Bundle (no entitlements) <-> XPC Launch Daemon <-> Application (with ent
 ```
 
 ```
-You could combine the two: (Not shown in my example code)
+You could combine the two: (Not in my example code)
 Application A <-> XPC Service plugin <-> XPC Launch Daemon <-> Application B
 ```
 
