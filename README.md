@@ -2,7 +2,7 @@
 
 This repo includes an example XPC MachService that works between different apps.
 
-I started with Apple's XPC Service template with Swift, the an XPCService plugin does not work with other applications. The reason XPC is usually needed is to communicate across different applications or processes. The prime example is two apps that need to simply talk to each other. This use case requires cross communication between two or more processes. A MachService allows any app, cli or process to use the service.
+I started with Apple's XPC Service template with Swift, the an XPCService plugin does not work with other applications. The reason to use XPC is to communicate across different applications or processes. The prime example is two apps that need to simply talk to each other. This use case requires cross communication between two or more processes. A MachService allows any app, cli or process to use the service.
 
 ```
 Apple's default template (no way in):
