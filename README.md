@@ -12,7 +12,7 @@ Application <-> XPC Service
 
 ```
 Consider this:
-Authorization Plugin (no entitlements) <-> XPC LaunchDaemon <-> Application (with entitlements)
+Authorization Plugin (no entitlements) <-> XPC LaunchDaemon <-> Launch Agent / Application (with entitlements)
 ```
 
 I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. I am sure there is much more to XPC than this. For me, having an end-to-end working example makes much easier to get started.
