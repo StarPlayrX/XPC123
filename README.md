@@ -47,7 +47,7 @@ Localhost http server A <-> Application A
 
 As you can see Apple's primary example leads you to a dead end. You could augment it with an embedded webserver on each side using Swifter or my fork SwifterLite, but that's more work. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which is only one to one.
 
-I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. There is more to XPC, but having a working example makes it easier.
+I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is an Application XPC Service vs. an XPC MachService.
 
 The MachService is designed run an a LaunchDaemon. Daemons cannot have a UI which makes it ideal to use XPC. Daemons are also system wide and runs as root. If you don't want it to be system wide or use root access consider using this as a LaunchAgent instead within the Aqua session (not covered).
 
