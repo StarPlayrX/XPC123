@@ -12,7 +12,7 @@ Application (with entitlements) <-> XPC Service plugin
 
 ```
 Alternative using an XPC MachService:
-Authorization Bundle (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
+Generic Bundle (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
 ```
 
 As you can see Apple's example leads you to a dead end. In fact with a XPC Launch Daemon one to many can use the Daemon, instead of one to one.
