@@ -8,7 +8,7 @@ I've included both a service and a client. Tried to make this as easy as possibl
 
 Hope this becomes useful to anyone wanting to use XPC across their own apps. Enjoy!
 
-The MachService seems to only works from a command line app / headless app, and not as a plugin. This means it needs to run as a LaunchDaemon which will make it system wide.
+The MachService seems to only works from a command line / headless app, not as a plugin. This means it needs to run as a LaunchDaemon which will make it system wide.
 
 The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hans't been officially tested yet and will be considered out of scope for now.
 
