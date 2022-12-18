@@ -9,7 +9,7 @@ Apple's default template (no way in):
 Application A <-> XPC Service A (Internal)
 Application B <-> Oh no!
 
-A & B talking to themselves (dead end):
+A & B, own XPC Service (dead end):
 Application A <-> XPC Service A (Internal)
 Application B <-> XPC Service B (Internal)
 ```
