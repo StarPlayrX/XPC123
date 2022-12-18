@@ -49,7 +49,7 @@ As you can see Apple's primary example leads you to a dead end. You could augmen
 
 I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is an Application XPC Service vs. an XPC MachService.
 
-The MachService is designed run an a LaunchDaemon. Daemons cannot have a UI which makes it ideal to use XPC. Daemons are also system wide and runs as root. If you don't want it to be system wide or use root access consider using this as a LaunchAgent instead within the Aqua session (not covered).
+The MachService is designed run an a LaunchDaemon. Daemons cannot have a UI which makes it ideal to use XPC. Daemons are also system wide and run as root. If you don't want this consider using this as a LaunchAgent instead within the Aqua session (not covered).
 
 The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hasn't been tested. 
 
