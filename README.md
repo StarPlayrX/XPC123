@@ -1,8 +1,8 @@
 # XPC123 - How to write a XPC Launch Daemon using Swift
 
-Made these example two Swift apps of a XPC MachService that works with both Application clients and command line utilities. 
+This repo includes an example XPC MachService that works between different apps.
 
-I started with Apple's XPC Service template with Swift, but Apple's example does not work with external applications making me question the value of that approach. The reason XPC is usually needed is to communicate across different applications or processes. A prime example is a bundle that may not have the ability to use entitlements but another application can. This use case requires cross communication between two or more processes. Converting it to a MachService with very little code changes, this allows any app or cli to use the service.
+I started with Apple's XPC Service template with Swift, the an XPCService plugin does not work with other applications. The reason XPC is usually needed is to communicate across different applications or processes. The prime example is two apps that need to simply talk to each other. This use case requires cross communication between two or more processes. A MachService allows any app, cli or process to use the service.
 
 ```
 Apple's default template:
