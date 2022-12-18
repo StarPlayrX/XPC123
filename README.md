@@ -15,7 +15,7 @@ Alternative using an XPC MachService:
 Generic Bundle (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
 ```
 
-As you can see Apple's example leads you to a dead end. In fact A XPC Launch Daemon is one to many. Apple's XPC Service template is one to one.
+As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. Apple's XPC Service template is only one to one.
 
 I've included both a service and a client. Tried to make this as easy as possible and kept it similar to Apple's XPCService Swift template for Applications / XPCService plugins. I am sure there is much more to XPC than this. For me, having an end-to-end working example makes much easier to get started.
 
