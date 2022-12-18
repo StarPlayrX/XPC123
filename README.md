@@ -13,7 +13,7 @@ Application (with entitlements) <-> XPC Service plugin
 ```
 Alternative using an XPC MachService:
 Generic Bundle (no entitlements) <-> XPC Launch Daemon 
-Application (with entitlements)  <-> XPC Launch Daemon 
+Application  (with entitlements) <-> XPC Launch Daemon 
 ```
 
 ```
