@@ -6,7 +6,8 @@ I started with Apple's XPC Service template with Swift, but Apple's example does
 
 ```
 Apple's default template:
-Application (with entitlements) <-> XPC Service plugin
+Application (with entitlements)  <-> XPC Service plugin
+Generic Bundle (no entitlements) <-> ?
 ```
 
 
