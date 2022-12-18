@@ -12,12 +12,14 @@ Application (with entitlements) <-> XPC Service plugin
 
 ```
 Alternative using an XPC MachService:
-Generic Bundle (no entitlements) <-> XPC Launch Daemon <-> Application (with entitlements)
+Generic Bundle (no entitlements) <-> XPC Launch Daemon 
+Application (with entitlements)  <-> XPC Launch Daemon 
 ```
 
 ```
 You could combine the two: (Not in my example code)
-Application A <-> XPC Service plugin <-> XPC Launch Daemon <-> Application B
+Application A <-> XPC Service plugin <-> XPC Launch Daemon
+Application B <-> XPC Service plugin <-> XPC Launch Daemon
 ```
 
 As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. Apple's XPC Service template is only one to one.
