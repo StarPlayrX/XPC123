@@ -17,8 +17,7 @@ Generic Bundle (no entitlements) <-> XPC Launch Daemon <-> Application (with ent
 
 ```
 You could combine the two: (Not shown in my example code)
-Application A -> XPC Service plugin -> XPC Launch Daemon -> Application B
-Application B -> XPC Service plugin -> XPC Launch Daemon -> Application A
+Application A <-> XPC Service plugin <-> XPC Launch Daemon <-> Application B
 ```
 
 As you can see Apple's example leads you to a dead end. In fact a XPC Launch Daemon has a one to many relationship vs. Apple's XPC Service template is only one to one.
