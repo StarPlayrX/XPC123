@@ -6,12 +6,12 @@ I started with Apple's XPC Service template with Swift, the an XPCService plugin
 
 ```
 Apple's default template:
-Application A <-> XPC Service plugin (Internal)
+Application A <-> XPC Service A (Internal)
 Application B <-> Oh no!
 
 A & B talking to themselves:
-Application A <-> XPC Service plugin (Internal)
-Application B <-> XPC Service plugin (Internal)
+Application A <-> XPC Service A (Internal)
+Application B <-> XPC Service B (Internal)
 ```
 
 
