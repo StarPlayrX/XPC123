@@ -9,7 +9,7 @@ Apple's default template:
 Application A <-> XPC Service A (Internal)
 Application B <-> Oh no!
 
-A & B talking to themselves:
+A & B talking to themselves (boring):
 Application A <-> XPC Service A (Internal)
 Application B <-> XPC Service B (Internal)
 ```
