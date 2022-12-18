@@ -25,16 +25,19 @@ Application B <-> XPC Launch Daemon (Systemwide)
 You could combine the two like this:
 Application A <-> XPC Service plugin <-> XPC Launch Daemon
 Application B <-> XPC Service plugin <-> XPC Launch Daemon
+```
 
-
-Or use two embedded http servers:
+```
+Use two embedded http servers:
 Application A           <-> XPC Launch Daemon
 Localhost http server B <-> Application B
 
 Application B           <-> XPC Launch Daemon
 Localhost http server A <-> Application A
+```
 
-You could get an XPC Service plugin to work like this:
+```
+To fix the XPC Service dead end you could do this:
 Application A           <-> XPC Service
 Localhost http server B <-> Application B
 
