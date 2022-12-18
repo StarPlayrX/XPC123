@@ -85,7 +85,7 @@ Application B <-> XPC Launch Daemon <-> Localhost http server A <-> Application 
 ```
 
 ```
-To fix the XPC Service dead end you could do this:
+To fix the XPC Service dead end, this would work:
 Application A <-> XPC Service A <-> Localhost http server B <-> Application B
 Application B <-> XPC Service B <-> Localhost http server A <-> Application A
 ```
