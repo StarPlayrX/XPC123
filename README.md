@@ -27,7 +27,7 @@ Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
 
-As you can see Apple's primary example leads you to a dead end. You could augment it with an embedded webserver on each side using Swifter or my fork SwifterLite, but that's out of scope. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which only has a one to one.
+As you can see Apple's primary example leads you to a dead end. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which only has a one to one.
 
 I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is XPC123's example is MachService vs. 
 
@@ -77,7 +77,7 @@ sudo launchctl unload -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.pli
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
-Here are some examples combining XPC with a http webserver. This can reduce having using a timer or a watcher to check if a backend call as been sent. Embedded https servers interface with its hosting app. You may be able to do with with XPC only and if you do, I'd love to see your example. You might also be able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps.
+Here are some examples combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller and more compactl like Swifter http web server or my fork SwifterLite backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. Embedded https servers interface with its hosting app. You may be able to do with with XPC only and if you do, I'd love to see your example. 
 
 ```
 Use two embedded http servers:
@@ -90,6 +90,8 @@ To fix the XPC Service dead end, this would work:
 Application A <-> XPC Service A <-> Localhost http server B <-> Application B
 Application B <-> XPC Service B <-> Localhost http server A <-> Application A
 ```
+
+Since Launch Daemons are system wide, you might able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app.
 
 Hope this becomes useful to anyone wanting to use XPC across their own apps.
 XPC easy as 123, XPC it's you and me!
