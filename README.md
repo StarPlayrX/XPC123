@@ -79,7 +79,7 @@ sudo launchctl unload -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.pli
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
-Here is an example combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller like Swifter http web server or my ultra light fork SwifterLite as backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. And you will have to use URLSession on the client side, plus a static http port that's doable but more complicated.
+Here is an example combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller like Swifter http web server or my ultra light fork SwifterLite as backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. And you will have to use URLSession on the client side, plus a static http port. This is doable but more complicated.
 
 ```shell
 # Use two embedded http servers:
