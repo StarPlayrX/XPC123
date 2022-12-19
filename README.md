@@ -8,8 +8,10 @@ I started with Apple's XPC Service template with Swift, the an XPCService plugin
 # default Apple XPC template (no way in):
 Application A <-> XPC Service A (Internal)
 Application B <-> Oh no!
+```
 
-A & B, own XPC Service (dead end):
+```shell
+#A & B, own XPC Service (dead end):
 Application A <-> XPC Service A (Internal)
 Application B <-> XPC Service B (Internal)
 ```
