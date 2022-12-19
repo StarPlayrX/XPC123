@@ -79,7 +79,9 @@ sudo launchctl unload -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.pli
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
-Here are some examples combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller and more compactl like Swifter http web server or my fork SwifterLite backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. Embedded https servers interface with its hosting app. You may be able to do with with XPC only and if you do, I'd love to see your example. 
+Here are some examples combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller and more compact like Swifter http web server or my fork SwifterLite backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. 
+
+Another alternative to using an http server as the middle man could be to use the Network Framework which is very compact and easy to use. You may be able to do with only an XPC Service or two. If you do, I'd love to see your example. 
 
 ```shell
 # Use two embedded http servers:
@@ -88,9 +90,9 @@ Application B <-> XPC Launch Daemon <-> Localhost http server A <-> Application 
 ```
 
 ```shell
-# To fix the XPC Service dead end, this would work:
-Application A <-> XPC Service A <-> Localhost http server B <-> Application B
-Application B <-> XPC Service B <-> Localhost http server A <-> Application A
+# To fix the XPC Service dead end, you add in the Network framework
+Application A <-> XPC Service A <-> Network Sender -> Network Receiver -> Application B
+Application B <-> XPC Service B <-> Network Sender -> Network Receiver -> Application A
 ```
 
 Since Launch Daemons are system wide, you might able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app.
