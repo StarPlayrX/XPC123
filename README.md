@@ -91,8 +91,8 @@ Application B <-> XPC Launch Daemon <-> Localhost http server A <-> Application 
 
 ```shell
 # To fix the XPC Service dead end, you add in the Network framework
-Application A <-> XPC Service A <-> Network Sender -> Network Receiver -> Application B
-Application B <-> XPC Service B <-> Network Sender -> Network Receiver -> Application A
+Application A <-> XPC Service A <-> Network Sender <-> Network Receiver -> Application B
+Application B <-> XPC Service B <-> Network Sender <-> Network Receiver -> Application A
 ```
 
 Since Launch Daemons are system wide, you might able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app.
