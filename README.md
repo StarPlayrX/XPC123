@@ -11,7 +11,7 @@ Application B <-> Oh no!
 ```
 
 ```shell
-#A & B, own XPC Service (dead end):
+# A & B, own XPC Service (dead end):
 Application A <-> XPC Service A (Internal)
 Application B <-> XPC Service B (Internal)
 ```
