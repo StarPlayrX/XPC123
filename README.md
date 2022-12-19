@@ -90,8 +90,8 @@ Application B <-> XPC Launch Daemon or XPC Service <-> Localhost http server A <
 Another alternative to using an http server as the middle man would be to use the Network Framework which is very simple and easy to use. You may be able to do with only XPC Service plugins plus the Network framework.
 ```shell
 # To fix the XPC Service dead end, you add in the Network framework
-Application A <-> XPC Service A <-> Network Sender A <-> Network Receiver B -> Application B
-Application B <-> XPC Service B <-> Network Sender B <-> Network Receiver A -> Application A
+Application A <-> XPC Service A -> Network Sender A <-> Network Receiver B -> Application B
+Application B <-> XPC Service B -> Network Sender B <-> Network Receiver A -> Application A
 ```
 
 Since Launch Daemons are system wide, you should able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app.
