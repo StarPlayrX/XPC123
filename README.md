@@ -4,7 +4,7 @@ This repo includes an example XPC MachService that works between different apps.
 
 I started with Apple's XPC Service template with Swift, the an XPCService plugin does not work with other applications. The reason to use XPC is to communicate across different applications or processes. The prime example is two apps that need to simply talk to each other. This use case requires cross communication between two or more processes. A MachService allows any app, cli or process to use the service.
 
-```
+```plist
 Apple's default template (no way in):
 Application A <-> XPC Service A (Internal)
 Application B <-> Oh no!
@@ -15,13 +15,13 @@ Application B <-> XPC Service B (Internal)
 ```
 
 
-```
+```plist
 Alternative using a MachService (bingo):
 Application A <-> XPC Launch Daemon (Systemwide)
 Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
-```
+```plist
 For safety, you could combine the two:
 Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
@@ -63,7 +63,7 @@ Once you've edited the example plist, it will need to go in /Library/LaunchDaemo
 Permissions:
 https://stackoverflow.com/questions/28063598/error-while-executing-plist-file-path-had-bad-ownership-permissions
 
-```
+```plist
 # Plist permissions (required, needs to be run every time you update the plist)
 sudo chown root:wheel /Library/LaunchDaemons/com.brusstodd.XPCMachService.plist
 
@@ -79,13 +79,13 @@ https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
 Here are some examples combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller and more compactl like Swifter http web server or my fork SwifterLite backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. Embedded https servers interface with its hosting app. You may be able to do with with XPC only and if you do, I'd love to see your example. 
 
-```
+```plist
 Use two embedded http servers:
 Application A <-> XPC Launch Daemon <-> Localhost http server B <-> Application B
 Application B <-> XPC Launch Daemon <-> Localhost http server A <-> Application A
 ```
 
-```
+```plist
 To fix the XPC Service dead end, this would work:
 Application A <-> XPC Service A <-> Localhost http server B <-> Application B
 Application B <-> XPC Service B <-> Localhost http server A <-> Application A
