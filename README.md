@@ -94,7 +94,7 @@ Application A <-> XPC Service A <-> Network Sender A <-> Network Receiver B -> A
 Application B <-> XPC Service B <-> Network Sender B <-> Network Receiver A -> Application A
 ```
 
-Since Launch Daemons are system wide, you might able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app.
+Since Launch Daemons are system wide, you should able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app.
 
 Hope this becomes useful to anyone wanting to use XPC across their own apps.
 XPC easy as 123, XPC it's you and me!
