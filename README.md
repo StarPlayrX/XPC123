@@ -39,7 +39,7 @@ Outside of Xcode, MachServices need to run as a LaunchDaemon. Apple allows MachS
 
 Example LaunchDaemon values. An example plist is included in the repo. Using Xcode, edit it to your liking.
 
-```json
+```plist
 {
     KeepAlive =     {
         SuccessfulExit = 0;
