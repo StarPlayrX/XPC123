@@ -5,26 +5,26 @@ This repo includes an example XPC MachService that works between different apps.
 I started with Apple's XPC Service template with Swift, the an XPCService plugin does not work with other applications. The reason to use XPC is to communicate across different applications or processes. The prime example is two apps that need to simply talk to each other. This use case requires cross communication between two or more processes. A MachService allows any app, cli or process to use the service.
 
 ```shell
-# default Apple XPC template (no way in):
+# default Apple XPC template (no way in)
 Application A <-> XPC Service A (Internal)
 Application B <-> Oh no!
 ```
 
 ```shell
-# A & B, own XPC Service (dead end):
+# A & B, own XPC Service (dead end)
 Application A <-> XPC Service A (Internal)
 Application B <-> XPC Service B (Internal)
 ```
 
 
 ```shell
-# Alternative using a MachService (bingo):
+# Alternative using a MachService (bingo)
 Application A <-> XPC Launch Daemon (Systemwide)
 Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
 ```shell
-# For abstraction, you could combine the two:
+# For abstraction, you could combine the two
 Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
@@ -82,7 +82,7 @@ https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 Here is an example combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller like Swifter http web server or my ultra light fork SwifterLite as backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. And you will have to use URLSession on the client side, plus a static http port. This is doable but more complicated.
 
 ```shell
-# Use two embedded http servers to provide an alert mechanism:
+# Use two embedded http servers to provide an alert mechanism
 Application A <-> XPC Launch Daemon or XPC Service <-> Localhost http server B <-> Application B
 Application B <-> XPC Launch Daemon or XPC Service <-> Localhost http server A <-> Application A
 ```
