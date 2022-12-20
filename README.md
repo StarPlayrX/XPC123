@@ -99,6 +99,4 @@ Application B <-> XPC Service B -> Network Sender B <-> Network Receiver A -> Ap
 
 Since Launch Daemons are system wide, you should able to use Distributed Center Notifications posted by the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app. This is similar to how Network framework's p2p works.
 
-Hope this becomes useful to anyone wanting to use XPC across their own apps.
-XPC easy as 123, XPC it's you and me!
-
+Hope little repo is useful to anyone wanting to use XPC across their own apps.
