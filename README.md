@@ -79,7 +79,7 @@ sudo launchctl unload -w /Library/LaunchDaemons/com.brusstodd.XPCMachService.pli
 Great discussion here on XPC MachServices
 https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
-Here is an example combining XPC with a http webserver. This can be done with most server side Swift languages, but I would recommended something smaller like Swifter http web server or my ultra light fork SwifterLite as backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. And you will have to use URLSession on the client side, plus a static http port. This is doable but more complicated.
+Here is an example combining XPC with a http webserver. This can be done with most server side Swift languages, but I ecommend something smaller like Swifter http web server or my ultra light fork, SwifterLite as backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. You will have to use URLSession on the client side and include a static http port. This is doable but more complicated.
 
 ```shell
 # Use two embedded http servers to provide an alert mechanism
@@ -87,14 +87,14 @@ Application A <-> XPC Launch Daemon or XPC Service <-> Localhost http server B <
 Application B <-> XPC Launch Daemon or XPC Service <-> Localhost http server A <-> Application A
 ```
 
-Another alternative would be to use the Network framework which is very simple and easy to use. You may be able to do this with only XPC Service plugins plus the Network framework.
+Another alternative would be to use the Network framework which is simple and easy to use. You may be able to do this with only XPC Service plugins plus the Network framework.
 ```shell
 # To fix the XPC Service dead end, you add in the Network framework to bridge the gap
 Application A <-> XPC Service A -> Network Sender A <-> Network Receiver B -> Application B
 Application B <-> XPC Service B -> Network Sender B <-> Network Receiver A -> Application A
 ```
 
-Since Launch Daemons are system wide, you should able to use Distributed Center Notifications posted the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app.
+Since Launch Daemons are system wide, you should able to use Distributed Center Notifications posted by the XPC Launch Daemon and observed by one of your apps that the XPC launch daemon has some info for your other app. This is similar to how Network framework's p2p works.
 
 Hope this becomes useful to anyone wanting to use XPC across their own apps.
 XPC easy as 123, XPC it's you and me!
