@@ -18,7 +18,7 @@ Application B <-> XPC Service B (Internal)
 
 
 ```shell
-# Alternative using a MachService (bingo)
+# Alternative using a MachService (eureka)
 Application A <-> XPC Launch Daemon (Systemwide)
 Application B <-> XPC Launch Daemon (Systemwide)
 ```
