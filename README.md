@@ -31,7 +31,7 @@ Application B <-> XPC Service B <-> XPC Launch Daemon
 
 As you can see Apple's primary example leads you to a dead end. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. an XPCService plugin which only has a one to one.
 
-I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is XPC123's example is MachService vs. 
+I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is XPC123's example is MachService install of an Application owned XPC Service.
 
 The MachService is designed run an a LaunchDaemon. Daemons cannot have a UI which makes it ideal to use XPC. Daemons are also system wide and run as root. If you don't want this consider using this as a LaunchAgent instead within the Aqua session (not covered).
 
