@@ -29,7 +29,7 @@ Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
 
-As you can see Apple's primary example leads you to a dead end. The alternative is to use a XPC Launch Daemon. It has a one to many relationship vs. a XPCService plugin which only has a one to one.
+As you can see Apple's primary example leads you to a dead end. The alternative is to use a XPC Launch Daemon. It has a one to many relationship. A XPC app plugin is one to one.
 
 I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is XPC123's example is MachService install of an Application owned XPC Service.
 
