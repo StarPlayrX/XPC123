@@ -33,11 +33,11 @@ As you can see Apple's primary example leads you to a dead end. The alternative 
 
 I've included both a service and a client and made this example as easy as possible. It's nearly identical to Apple's XPCService Swift XPCService plugin. The main difference is XPC123's example is MachService install of an Application owned XPC Service.
 
-The MachService is designed run an a LaunchDaemon. Daemons cannot have a UI which makes it ideal to use XPC. Daemons are also system wide and run as root. If you don't want this consider using this as a LaunchAgent instead within the Aqua session (not covered).
+The MachService is designed run an a LaunchDaemon. Daemons cannot have a UI which makes it ideal to use XPC. Daemons are also system wide and run as root. If you don't want this consider using a LaunchAgent within the Aqua session aka user space. See launchd and launchctl for details.
 
-The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins, but that hasn't been tested. 
+The MachClient can run in either a gui app or command line tool. This should also work with Authorization Plugins. The later hasn't been tested. 
 
-Outside of Xcode, MachServices need to run as a LaunchDaemon. Apple allows MachServices to run in Xcode for testing and development purposes only. Here is some info on that: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
+For software development and testing, Apple allows MachServices to run in Xcode for testing and development purposes. Outside of Xcode, MachServices need to run either as a LaunchDaemon or be launched using launchctl via a plist. Reference: https://stackoverflow.com/questions/19881950/xpc-communication-between-service-and-client-app-works-only-when-launched-from-x
 
 Example LaunchDaemon values. An example plist is included in the repo. Using Xcode, edit it to your liking.
 
