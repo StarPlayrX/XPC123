@@ -6,8 +6,8 @@ I started with Apple's XPC Service template with Swift, the an XPCService plugin
 
 ```shell
 # default Apple XPC template (no way in)
-Application A <-> XPC Service A (Internal)
-Application B <-> Oh no!
+Application A <->   XPC Service A (Internal)
+Application B <-/-> XPC Service A (can't be reached, dead end)
 ```
 
 ```shell
