@@ -82,7 +82,7 @@ https://launchd-dev.macosforge.narkive.com/xYLsgYJR/the-machservice-key
 
 ### Interesting Out of Scope Things
 
-Here is an example combining XPC with a http webserver. This can be done with most server side Swift languages, but I ecommend something smaller like Swifter http web server or my ultra light fork, SwifterLite as backend http server. This can reduce having using a timer or a watcher to check if a backend call as been sent. You will have to use URLSession on the client side and include a static http port. This is doable but more complicated.
+Here is an example combining XPC with a http webserver. I recommend Swifter or fork SwifterLite. This can reduce having using a timer or a watcher to check if a backend call as been sent. You will have to use URLSession on the client side and include a common static http port. This is doable but more complicated and may require an http server on both side A and B.
 
 ```shell
 # Use two embedded http servers to provide an alert mechanism
