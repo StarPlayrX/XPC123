@@ -24,7 +24,7 @@ Application B <-> XPC Launch Daemon (Systemwide)
 ```
 
 ```shell
-# For abstraction, you could combine the two
+# You could combine the two (separation)
 Application A <-> XPC Service A <-> XPC Launch Daemon
 Application B <-> XPC Service B <-> XPC Launch Daemon
 ```
