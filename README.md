@@ -175,5 +175,4 @@ client.sendMessage("Hello, XPC123!")
 - Make sure to adjust the `serviceName` to match the actual bundle identifier or service name used by your XPC service.
 - Include any necessary permissions in your app's entitlements if it needs access to XPC services.
 
-This setup provides a basic framework for using **XPC123** to establish communication between an app and an XPC service on macOS. Let me know if you'd like further details on specific parts!
-
+This setup provides a basic framework for using **XPC123** to establish communication between an app and an XPC service on macOS. 
