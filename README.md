@@ -102,4 +102,100 @@ Since Launch Daemons are system wide, you should able to use Distributed Center 
 tidbit on Protocols & exposing them to Objective-C @objc (required for protocols, but not for functions within the protocol)
 https://stackoverflow.com/questions/52568409/cannot-convert-value-of-type-aprotocol-protocol-to-expected-argument-type-prot
 
-Hope little repo is useful to anyone wanting to use XPC across their own apps.
+Hope little repo is useful to anyone wanting to use XPC across their own apps. Here are some code examples (AI Generated):
+# Using XPC123: Sample Code
+
+This guide provides sample code to help you set up an XPC service and communicate with it in Swift, using the **XPC123** repository as a foundation.
+
+## 1. Setting Up the XPC Service in XPC123
+
+First, you’d create an XPC Service, often configured as a Launch Daemon in `XPC123`. Below is an example of an XPC service in Swift that can receive and process requests.
+
+### Service Side: XPC Service (Server)
+
+Define a protocol to specify the methods available to clients:
+
+```swift
+import Foundation
+
+@objc protocol MyXPCProtocol {
+    func sendMessage(_ message: String, withReply reply: @escaping (String) -> Void)
+}
+```
+
+Then implement this protocol in the main service file:
+
+```swift
+import Foundation
+
+class MyXPCService: NSObject, MyXPCProtocol {
+    func sendMessage(_ message: String, withReply reply: @escaping (String) -> Void) {
+        print("Received message from client: \(message)")
+        reply("Hello from XPC Service! Your message was: \(message)")
+    }
+}
+
+// Start the service listener
+let delegate = MyXPCService()
+let listener = NSXPCListener.service()
+listener.delegate = delegate
+listener.resume()
+```
+
+## 2. Setting Up the Client Side in Your App
+
+To connect to the XPC service from a macOS app, configure the app to locate and communicate with the XPC service.
+
+### Client Side: macOS App (Client)
+
+Create an instance of `NSXPCConnection` to connect to the XPC service:
+
+```swift
+import Foundation
+
+class XPCClient {
+    private var connection: NSXPCConnection?
+
+    init() {
+        // Establish a connection to the XPC service
+        connection = NSXPCConnection(serviceName: "com.yourdomain.XPC123Service")
+        connection?.remoteObjectInterface = NSXPCInterface(with: MyXPCProtocol.self)
+        connection?.resume()
+    }
+
+    func sendMessage(_ message: String) {
+        // Ensure the connection exists and call the remote method
+        guard let proxy = connection?.remoteObjectProxyWithErrorHandler({ error in
+            print("XPC Error: \(error)")
+        }) as? MyXPCProtocol else { return }
+
+        // Send a message and receive a response asynchronously
+        proxy.sendMessage(message) { response in
+            print("Received response from XPC Service: \(response)")
+        }
+    }
+
+    deinit {
+        connection?.invalidate()
+    }
+}
+
+// Usage example
+let client = XPCClient()
+client.sendMessage("Hello, XPC123!")
+```
+
+---
+
+### Summary
+
+- **Service Side**: Implements `MyXPCProtocol` and listens for messages, responding accordingly.
+- **Client Side**: Sets up an `NSXPCConnection`, sends messages to the XPC service, and handles responses.
+
+### Notes
+
+- Make sure to adjust the `serviceName` to match the actual bundle identifier or service name used by your XPC service.
+- Include any necessary permissions in your app's entitlements if it needs access to XPC services.
+
+This setup provides a basic framework for using **XPC123** to establish communication between an app and an XPC service on macOS. Let me know if you'd like further details on specific parts!
+
